@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const httpRunner = require('./runner/web/http')
+const bdRunner = require('./runner/web/db')
+
+
+const run = async () => {
+  await bdRunner();
+  await httpRunner();
+}
+run();
