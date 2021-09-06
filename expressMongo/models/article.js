@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-require('article');
+
 const { Schema } = mongoose;
 
 const generalSchema = new Schema({
@@ -17,8 +17,8 @@ const generalSchema = new Schema({
     date_publik: {
         type: Schema.Types.Date
     },
-    gift: {
-        type:Schema.Types.ObjectId, ref: 'article'
+    article_text: {
+        type:Schema.Types.String
     }
 
 })

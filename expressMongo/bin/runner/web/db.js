@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://localhost:27017/articles';
+const url = 'mongodb://localhost:27017/gift';
 
 const options = {
     useNewUrlParser: true,
