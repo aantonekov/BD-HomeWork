@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+     
+  <form class = "bookAdd" autocomplete = 'off' method="POST">
+
+    <h1>Add book</h1>
+
+    <input type="text" name="bookName" placeholder="Name Book" >
+    <br>
+    <br>
+
+    <select class="bookAvtor" name="bookAvtor" placeholder="select author"> 
+    </select>
+
+    <br>
+    <br>
+
+    <select class="bookGenre" name="bookGenre" placeholder="select genre">
+      
+    </select>
+
+    <br>
+    <br>
+
+    <input name="bookDatetime" id="datetime" type="datetime-local">
+
+    <br>
+    <br>
+
+    <textarea name="bookText" placeholder="Write your text">
+
+    </textarea>
+    
+    <br>
+    <br>
+
+      <button type="submit" class="BTNBookAdd">Create</button>
+  </form>
+</body>
+<script src="/js/acp/main.js"></script>
+</html>
