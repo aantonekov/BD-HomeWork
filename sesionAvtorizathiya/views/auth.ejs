@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.min.js"></script>
+  </head>
+  <body>
+    
+    <div class="auth hidden">
+      Авторизация:
+        <form name="auth" method="post">
+            <input type="text" name="login" placeholder="login">
+            <input type="password" name="pwd" placeholder="password">
+            <button type="submit">Login</button>
+        </form><br>
+        Нету аккаунта?<a href="/registerUser" class="registerUserBtn">Зарегистрируйся</a>
+    </div>
+
+    <div class="logout hidden">
+        <button type="button">Logout</button>
+    </div>
+
+    <div class="reply hidden"></div>
+
+    </form>
+
+  </body>
+
+  <script src="/js/auth.js"></script>
+</html>

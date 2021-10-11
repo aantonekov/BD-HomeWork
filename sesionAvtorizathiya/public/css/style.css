@@ -1,0 +1,28 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.productList {
+  display: flex;
+  justify-content:space-around;
+  
+}
+.card {
+  border: 1px solid #00B7FF;
+  
+  padding:150px 10px 10px 10px;
+  width: 200px;
+}
+.hidden {
+  display: none;
+}
+.authBtn{
+  margin-left: 10px;
+}
+.registerUserBtn{
+  margin-left: 10px;
+}
