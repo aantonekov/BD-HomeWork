@@ -43,9 +43,9 @@ generalSchema.virtual('pwd')
 
 generalSchema.methods.checkPwd = function(pwd) {
 const hash = hashingPwd(pwd);
-console.log('1:', hash)
-console.log('2:', this.hashPwd)
-console.log('3:', this)
+// console.log('1:', hash)
+// console.log('2:', this.hashPwd)
+// console.log('3:', this)
 const check = hash === this.hashPwd;
 return check;
 }

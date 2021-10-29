@@ -1,14 +1,20 @@
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 
-let privKey = null;
+const keyPath = path.join(__dirname, '../keys/priv.key');
+
+let privateKey = null;
 
 const getPrivateKey = async () => {
-    if (!privKey) {
-        const keyPath = path.join(__dirname,'../../keys/priv.key');
-        privKey = await fs.readFile(keyPath,'utf-8')
+
+    if(!privateKey) {
+        privateKey = await fs.readFile(keyPath, 'utf-8');
     }
-    return privKey;
+    return privateKey;
 };
 
 module.exports = getPrivateKey;
+
+
+
+

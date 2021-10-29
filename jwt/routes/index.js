@@ -3,12 +3,27 @@ const upload = require('multer')();
 const router = express.Router();
 
 
-const createUserCtr = require('../controllers/createUser')
+const adminControl = require('../controllers/login')
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index');
 });
+
+router.post('/',upload.none(), async ( req, res ) => {
+  
+  const data = req.body;
+  
+  const result = await adminControl.login(data.login, data.pwd);
+
+    if([ 'unknown user', 'invalid password' ].includes(result.status)){
+      res.json({ status: 'fail authorisation'});
+      return;
+    }
+  
+  res.json({ status: 'ok', user: result });
+
+})
 
 router.get('/registerUser',( req, res ) =>{
   res.render('registerUserPage')
@@ -18,7 +33,7 @@ router.post('/registerUser', upload.none(), async (req,res) => {
  
   const { name, login, pwd } = req.body;
   
-  const result = await createUserCtr.createUser( name, login, pwd ) 
+  const result = await adminControl.createUser( name, login, pwd ) 
 
   if (result.status === 'dublicate_name') {
       res.json({ status: 'dublicate_name'});
